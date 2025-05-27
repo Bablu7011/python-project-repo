@@ -8,7 +8,9 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'pip install pytest'
+                  sh 'sudo apt update'
+                  sh 'sudo apt install python3-pip -y'
+                  sh 'pip3 install pytest'  
             }
         }
         stage('Run Tests') {
