@@ -11,8 +11,8 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 sh '''
-                apt update -y
-                apt install -y python3-pip
+                sudo apt update -y
+                sudo apt install -y python3-pip
                 pip3 install pytest
                 '''
             }
